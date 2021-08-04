@@ -1,14 +1,12 @@
 from game import game
 
-num_players = int(input('How many player are going to play? '))
+num_players = input('How many player are going to play? ')
 
-if num_players not in range(1, 4):
-    while num_players not in range(1, 4):
-        print('\nYou can play solo or up to 4 players.')
-        num_players = int(input('How many player are going to play? '))
+while not num_players.isnumeric() or int(num_players) not in range(1, 4):
+    num_players = input('You can play solo or up to 4 players. How many people are going to play? ')
 
 points = {}
-for i in range(1, num_players + 1):
+for i in range(1, int(num_players) + 1):
     player_name = input(f'\nWhat´s the player {i} name? ')
     points[player_name] = game(player_name)
 

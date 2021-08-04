@@ -18,4 +18,6 @@ animals_question = {'What is the fastest animal in the world?\n'
                     'c - Husky\n'
                     'd - Chihuahua':
                         'b'
+
+                    
                     }
